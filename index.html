@@ -1,34 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Luminari Core</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 2rem;
+      font-family: sans-serif;
+      background-color: #111;
+      color: #fff;
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    button {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 0.25rem;
+      cursor: pointer;
+    }
+    .btn-region {
+      background: #fff;
+      color: #111;
+    }
+    .btn-upgrade {
+      background: gold;
+      color: #000;
+      margin-top: 1rem;
+    }
+    .landscape-warning {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+    @media screen and (orientation: landscape) {
+      body {
+        background-color: #000;
+      }
+      .landscape-warning {
+        display: block;
+        color: lime;
+      }
+    }
+  </style>
 </head>
-<body class="dark">
-  <div class="container">
-    <header>
-      <h1>Luminari Core</h1>
-      <p class="slogan">Spark Within</p>
-      <button onclick="toggleRegion()">🌍 Toggle Region</button>
-    </header>
-
-    <section id="userInfo">
-      <p>Welcome, <span id="userType">Free User</span></p>
-      <button onclick="toggleCoreX()">Upgrade to CoreX</button>
-    </section>
-
-    <section id="regionZone">
-      <h2 id="zoneTitle">India Zone</h2>
-      <div id="buildRecommendations"></div>
-    </section>
-
-    <footer>
-      <p>Powered by Amazon, Flipkart, MDComputers Affiliates</p>
-    </footer>
-  </div>
-
-  <script src="main.js"></script>
+<body>
+  <h1>Luminari Core</h1>
+  <p>Spark Within</p>
+  <button class="btn-region">🌍 Toggle Region</button>
+  <p>Welcome, Free User</p>
+  <button class="btn-upgrade">Upgrade to CoreX</button>
+  <h2>India Zone</h2>
+  <p>Powered by Amazon, Flipkart, MDComputers Affiliates</p>
+  <div class="landscape-warning">You're in landscape mode</div>
 </body>
 </html>
