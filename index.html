@@ -6,11 +6,27 @@
   <title>Luminari Core</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <div id="app">
-    <!-- Add your actual UI elements here -->
-    <h1>Welcome to Luminari Core</h1>
-    <p>Loading full interface...</p>
+<body class="dark">
+  <div class="container">
+    <header>
+      <h1>Luminari Core</h1>
+      <p class="slogan">Spark Within</p>
+      <button onclick="toggleRegion()">🌍 Toggle Region</button>
+    </header>
+
+    <section id="userInfo">
+      <p>Welcome, <span id="userType">Free User</span></p>
+      <button onclick="toggleCoreX()">Upgrade to CoreX</button>
+    </section>
+
+    <section id="regionZone">
+      <h2 id="zoneTitle">India Zone</h2>
+      <div id="buildRecommendations"></div>
+    </section>
+
+    <footer>
+      <p>Powered by Amazon, Flipkart, MDComputers Affiliates</p>
+    </footer>
   </div>
 
   <script src="main.js"></script>
